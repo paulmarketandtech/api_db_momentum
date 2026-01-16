@@ -34,7 +34,7 @@ wheels = [
 ]
 
 [[package]]
-name = "api-db"
+name = "api-db-momentum"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

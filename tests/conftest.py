@@ -3,7 +3,7 @@ import os
 import pytest
 from fastapi.testclient import TestClient
 
-os.environ["DATABASE_PATH"] = "api_db_momentum/tests/fixtures/test_data.db"
+os.environ["DATABASE_PATH"] = "tests/fixtures/test_data.db"
 from ..main import app
 
 

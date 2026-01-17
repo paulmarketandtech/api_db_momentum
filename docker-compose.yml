@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    container_name: momentum-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../db_hub:/app/db_hub
+    env_file: .env
+    networks:
+      - momentum-network
+
+networks:
+  momentum-network:
+    external: true

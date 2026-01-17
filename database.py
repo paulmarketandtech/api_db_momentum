@@ -7,7 +7,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 
 load_dotenv()
 
-DB_PATH = Path(__file__).parent.parent / os.getenv("DATABASE_PATH")
+DB_PATH = Path(__file__).parent / os.getenv("DATABASE_PATH")
 DATABASE_URL = f"sqlite:///{DB_PATH}"
 
 engine = create_engine(DATABASE_URL)

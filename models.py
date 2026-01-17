@@ -1,6 +1,6 @@
 from sqlalchemy import Boolean, Column, Date, Float, Integer, String, UniqueConstraint
 
-from .database import Base
+from database import Base
 
 
 class StockData(Base):

@@ -2,8 +2,8 @@ from datetime import date as date_type
 
 from fastapi import APIRouter
 
-from ..database import session
-from ..models import StockData
+from database import session
+from models import StockData
 
 router = APIRouter(prefix="/meta_data", tags=["meta_data"])
 

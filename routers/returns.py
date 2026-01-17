@@ -2,9 +2,9 @@ from datetime import date as date_type
 
 from fastapi import APIRouter
 
-from ..database import session
-from ..models import YTD20Best, YTD20Worst
-from ..schemas import YTDBestWorstRead
+from database import session
+from models import YTD20Best, YTD20Worst
+from schemas import YTDBestWorstRead
 
 router = APIRouter(prefix="/returns", tags=["returns"])
 

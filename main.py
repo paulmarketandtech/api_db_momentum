@@ -1,7 +1,7 @@
 import fastapi_swagger_dark as fsd
 from fastapi import APIRouter, FastAPI
 
-from .routers import meta_data, prices, returns
+from routers import meta_data, prices, returns
 
 app = FastAPI(docs_url=None)
 router = APIRouter()

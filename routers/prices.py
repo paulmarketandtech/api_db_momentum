@@ -3,9 +3,9 @@ from typing import Union
 
 from fastapi import APIRouter
 
-from ..database import session
-from ..models import StockData
-from ..schemas import StockDataRead
+from database import session
+from models import StockData
+from schemas import StockDataRead
 
 router = APIRouter(prefix="/prices", tags=["prices"])
 

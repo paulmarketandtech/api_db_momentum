@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: momentum-api
+  namespace: stocks
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: momentum-api
+  template:
+    metadata:
+      labels:
+        app: momentum-api
+    spec:
+      containers:
+        - name: momentum-api
+          image: momentum-api:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: momentum-api-config
+          volumeMounts:
+            - name: db-storage
+              mountPath: /app/db_hub
+      volumes:
+        - name: db-storage
+          hostPath:
+            path: /home/paul/ai_bitch/db_hub
+            type: Directory
